@@ -1,0 +1,25 @@
+{
+  "name": "mwp-util",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "rm -r lib && webpack --config ./build/webpack.config.js"
+  },
+  "author": "wy <631824375@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "require-context": "^1.1.0",
+    "trim-right": "^1.0.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0"
+  }
+}
