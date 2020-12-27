@@ -3,10 +3,13 @@ const resolve = (_path) => path.resolve(__dirname, _path)
 module.exports = {
   mode: 'production',
   entry: resolve('../src/main'),
+  watch: true,
   output: {
+    publicPath: './',
     path: resolve('../lib'),
     filename: '[name].js',
     library: 'mwp-util',
+    chunkFilename: 'js/[name].js',
     libraryTarget: 'umd'
   },
   resolve: {
@@ -24,5 +27,21 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'async',
+  //     minSize: 0,
+  //     maxSize: 1,
+  //     maxInitialRequests: 2,
+  //     name: false,
+  //     minChunks: 1,
+  //     cacheGroups: {
+  //       default: {
+  //         minChunks: 1,
+  //         reuseExistingChunk: false
+  //       }
+  //     }
+  //   }
+  // }
 }
